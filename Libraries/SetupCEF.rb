@@ -65,6 +65,13 @@ class CEF < ZipAndCmakeDLDep
         "libxcomposite1", "	libxtst6", "libxss1", "libatk1.0-0"
       ]
     end
+
+    if os == "arch"
+
+      return [
+        "libxcomposite", "libxtst", "libxss", "atk"
+      ]
+    end
     
     onError "#{@name} unknown packages for os: #{os}"
 

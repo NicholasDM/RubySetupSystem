@@ -107,7 +107,15 @@ class FFMPEG < BaseDep
         "zlib1g-dev"
       ]
     end
-    
+
+    if os == "arch"
+
+      return [
+        "autoconf", "automake", "bzip2", "cmake", "freetype2", "gcc", "git", "libtool",
+        "make", "mercurial", "nasm", "pkgconfig", "zlib", "yasm"
+      ]
+    end
+
     onError "#{@name} unknown packages for os: #{os}"
 
   end

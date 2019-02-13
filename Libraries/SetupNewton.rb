@@ -31,6 +31,12 @@ class Newton < StandardCMakeDep
         "libtinyxml-dev"
       ]
     end
+
+    if os == "arch"
+      return [
+        "tinyxml"
+      ]
+    end
     
     onError "#{@name} unknown packages for os: #{os}"
 

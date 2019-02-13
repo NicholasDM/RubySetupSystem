@@ -30,6 +30,12 @@ class CAudio < StandardCMakeDep
         "openal-soft-dev"
       ]
     end
+
+    if os == "arch"
+      return [
+        "openal"
+      ]
+    end
     
     onError "#{@name} unknown packages for os: #{os}"
 

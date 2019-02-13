@@ -27,6 +27,12 @@ class SFML < StandardCMakeDep
         "libflac-devel", "libopenal-dev"
       ]
     end
+
+    if os == "arch"
+      return [
+        "xcb-util-image", "systemd", "libjpeg-turbo", "libvorbis", "flac", "openal"
+      ]
+    end
     
     onError "#{@name} unknown packages for os: #{os}"
 
